@@ -5,5 +5,5 @@ variable "common_tags" {
 
 variable "SLACK_CHANNEL" {}
 variable "SLACK_HOOK_URL" {}
-variable "event_rule_arn" {}
+variable "event_rule_name" {}
 variable "notification_topic_arn" {}
