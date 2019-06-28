@@ -9,7 +9,7 @@ resource "aws_lambda_function" "awstoslack" {
   source_code_hash = "${data.archive_file.lambda.output_base64sha256}"
 
   environment {
-    variables {
+    variables = {
       SLACK_CHANNEL  = "${var.SLACK_CHANNEL}"
       SLACK_HOOK_URL = "${var.SLACK_HOOK_URL}"
     }
