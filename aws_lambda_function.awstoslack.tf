@@ -3,7 +3,7 @@ resource "aws_lambda_function" "awstoslack" {
   handler          = "src/index.handler"
   memory_size      = "256"
   role             = "${aws_iam_role.awstoslack.arn}"
-  runtime          = "nodejs6.10"
+  runtime          = "nodejs8.10"
   timeout          = "10"
   filename         = "${path.module}/lambda.zip"
   source_code_hash = "${data.archive_file.lambda.output_base64sha256}"
