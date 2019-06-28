@@ -10,8 +10,8 @@ resource "aws_lambda_function" "awstoslack" {
 
   environment {
     variables {
-      "SLACK_CHANNEL"  = "${var.SLACK_CHANNEL}"
-      "SLACK_HOOK_URL" = "${var.SLACK_HOOK_URL}"
+      SLACK_CHANNEL  = "${var.SLACK_CHANNEL}"
+      SLACK_HOOK_URL = "${var.SLACK_HOOK_URL}"
     }
   }
 
