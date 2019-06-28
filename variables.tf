@@ -3,18 +3,7 @@ variable "common_tags" {
   type        = "map"
 }
 
-variable "SLACK_CHANNEL" {
-  type = "string"
-}
-
-variable "SLACK_HOOK_URL" {
-  type = "string"
-}
-
-variable "rules" {
-  type = "list"
-}
-
-variable "arns" {
-  type = "list"
-}
+variable "SLACK_CHANNEL" {}
+variable "SLACK_HOOK_URL" {}
+variable "event_rule_arn" {}
+variable "notification_topic_arn" {}
