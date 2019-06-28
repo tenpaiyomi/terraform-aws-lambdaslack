@@ -4,5 +4,5 @@ resource "aws_lambda_permission" "EventsToLambda" {
   action        = "lambda:InvokeFunction"
   function_name = "${aws_lambda_function.awstoslack.function_name}"
   principal     = "events.amazonaws.com"
-  source_arn    = "arn:aws:events:eu-west-1:553700203877:rule/${element(var.rules, count.index)}"
+  source_arn    = "${element(var.rules, count.index).arn}"
 }
