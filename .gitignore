@@ -20,3 +20,13 @@ tmp
 lambda
 *~HEAD
 *backup
+
+code/.circleci
+code/docs
+code/test
+code/.editorconfig
+code/.eslintrc
+code/cloudformation.yaml
+code/LICENSE
+code/Makefile
+code/README.md
