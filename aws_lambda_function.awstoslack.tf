@@ -1,5 +1,5 @@
 resource "aws_lambda_function" "awstoslack" {
-  function_name    = "aws-to-slack-Handler-1EGUEB33ADSVH"
+  function_name    = "AWSToSlackHandler"
   handler          = "src/index.handler"
   memory_size      = "256"
   role             = "${aws_iam_role.awstoslack.arn}"
