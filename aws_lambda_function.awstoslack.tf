@@ -6,7 +6,8 @@ resource "aws_lambda_function" "awstoslack" {
   runtime          = "nodejs8.10"
   timeout          = "10"
   filename         = "${path.module}/lambda.zip"
-  source_code_hash = "${data.archive_file.lambda.output_base64sha256}"
+  s3_bucket        = "${var.s3_bucket_name}"
+  s3_key           = "${var.s3_file_key}"
 
   environment {
     variables = {
@@ -16,4 +17,8 @@ resource "aws_lambda_function" "awstoslack" {
   }
 
   tags = "${var.common_tags}"
+
+  depends_on = [
+    "aws_s3_bucket_object.lambda-zip",
+  ]
 }
